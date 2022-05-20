@@ -15,18 +15,33 @@
   },
   "homepage": "https://github.com/tumblbug/gatsby-source-workable",
   "keywords": [
-      "gatsby",
-      "gatsby-plugin",
-      "gatsby-source-plugin"
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin"
   ],
   "author": "Bjorn Tegelund <bjorn@tumblbug.com>",
+  "contributors": [
+    {
+      "name": "Marco Cotrufo",
+      "email": "marco@fido.id"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "babel-cli": "^6.26.0"
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "semantic-release": "19.0.2",
+    "validate-commit-msg": "2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
