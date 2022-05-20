@@ -1,7 +1,8 @@
-const crypto = require('crypto')
-const axios = require('axios')
+const { createContentDigest } = require("gatsby-core-utils");
+const axios = require('axios');
+import type { GatsbyNode } from "gatsby"
 
-exports.sourceNodes = async ({ boundActionCreators: { createNode } }, { subdomain, apiKey, queryParams = { state: 'published' }, fetchJobDetails }) => {
+export const sourceNodes: GatsbyNode["sourceNodes"] = async ({ actions: { createNode } }, { subdomain, apiKey, queryParams = { state: 'published' }, fetchJobDetails }) => {
   const axiosClient = axios.create({
     baseURL: `https://${subdomain}.workable.com/spi/v3/`,
     headers: {
@@ -24,7 +25,7 @@ exports.sourceNodes = async ({ boundActionCreators: { createNode } }, { subdomai
       internal: {
         type: 'WorkableJob',
         content: jsonString,
-        contentDigest: crypto.createHash('md5').update(jsonString).digest('hex'),
+        contentDigest: createContentDigest(jsonString),
       },
     }
     // Insert data into gatsby
