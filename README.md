@@ -1,6 +1,8 @@
 # gatsby-source-workable
 > Loads job openings from Workable into Gatsby.js
 
+This repository is a fork of [tumblbug/gatsby-source-workable](https://github.com/tumblbug/gatsby-source-workable)
+
 ## Installation
 
 ```bash
@@ -48,3 +50,8 @@ You can query the nodes created by the plugin as follows:
 }
 ```
 Detailed field descriptions are also available on [Workable's API Documentation](https://workable.readme.io/docs/jobs).
+
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
