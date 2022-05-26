@@ -6,7 +6,7 @@ This repository is a fork of [tumblbug/gatsby-source-workable](https://github.co
 ## Installation
 
 ```bash
-npm install gatsby-source-workable
+npm install @fido.id/gatsby-source-workable
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ Next, edit `gatsby-config.js` to use the plugin:
     plugins: [
     ...
     {
-      resolve: 'gatsby-source-workable',
+      resolve: '@fido.id/gatsby-source-workable',
       options: {
         subdomain: 'mycompany',
         apiKey: 'abc-123',
